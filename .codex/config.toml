@@ -1,0 +1,12 @@
+# .codex/config.toml
+
+# This project is a workflow-only Codex agent workspace.
+# It does not implement an application service.
+# It defines how Codex should operate as a Confluence Wiki Maintainer Agent.
+
+project_doc_fallback_filenames = ["AGENTS.md"]
+project_doc_max_bytes = 131072
+model_reasoning_effort = "high"
+
+# Keep approval behavior conservative because this agent can update Confluence pages.
+# If your Codex version uses different approval keys, keep this file minimal and rely on AGENTS.md.

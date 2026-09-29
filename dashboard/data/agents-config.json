@@ -1,0 +1,289 @@
+[
+  {
+    "id": "trig_01E5Ktiv4jfrzVDqv4RKM8qp",
+    "name": "SFOOD Wiki Weekly Maintenance",
+    "cronExpression": "0 11 * * *",
+    "department": "Wiki 관리팀",
+    "runReportPrefix": "weekly",
+    "expectedDurationMin": 25,
+    "agents": [
+      {
+        "id": "harvest",
+        "name": "김하루",
+        "rank": "사원",
+        "role": "콘텐츠 리서처",
+        "photo": "/employees/kim-haru.jpg",
+        "employeeId": "SF-2024-031",
+        "joinedAt": "2024-07-01",
+        "colorClass": "amber",
+        "model": "claude-haiku-4-5",
+        "pipelineStep": 1,
+        "pipelineStepLabel": "수확",
+        "description": "Confluence 페이지를 순회하며 최신 키워드와 갱신 필요 항목을 수집합니다.",
+        "bio": "Confluence 전체를 순회하며 가이드 업데이트가 필요한 페이지와 누락된 키워드를 찾아냅니다. 빠른 스캔과 꼼꼼한 분류가 강점입니다.",
+        "skills": ["키워드 리서치", "콘텐츠 분류", "트렌드 모니터링"],
+        "tasks": [
+          "Confluence Index 페이지 전체 순회",
+          "최신 AI 도구 키워드 수집",
+          "갱신 필요 페이지 식별",
+          "수확 결과를 harvest-result.json으로 저장"
+        ]
+      },
+      {
+        "id": "gap",
+        "name": "박지안",
+        "rank": "대리",
+        "role": "데이터 분석가",
+        "photo": "/employees/park-jian.jpg",
+        "employeeId": "SF-2023-014",
+        "joinedAt": "2023-03-02",
+        "colorClass": "blue",
+        "model": "claude-haiku-4-5",
+        "pipelineStep": 2,
+        "pipelineStepLabel": "분석",
+        "description": "수확 결과를 분석하여 누락된 가이드 및 업데이트 필요 항목을 식별합니다.",
+        "bio": "수확된 데이터를 분석해 현재 위키와 이상적인 상태 사이의 갭을 정량화합니다. 우선순위 판단에 강합니다.",
+        "skills": ["데이터 분석", "갭 탐지", "우선순위 설계"],
+        "tasks": [
+          "수확 결과 파일 분석",
+          "누락된 가이드 목록 도출",
+          "업데이트 필요 페이지 우선순위 결정",
+          "갭 분석 결과를 gap-result.json으로 저장"
+        ]
+      },
+      {
+        "id": "writer-claude",
+        "name": "이서연",
+        "rank": "과장",
+        "role": "테크니컬 라이터 · Claude 담당",
+        "photo": "/employees/lee-seoyeon.jpg",
+        "employeeId": "SF-2021-007",
+        "joinedAt": "2021-05-17",
+        "colorClass": "purple",
+        "model": "claude-sonnet-4-6",
+        "pipelineStep": 3,
+        "pipelineStepLabel": "작성",
+        "description": "Claude 관련 가이드 페이지를 작성 및 업데이트합니다.",
+        "bio": "Claude Code, API, 프롬프트 기법 등 Claude 생태계 전반의 가이드를 책임지는 5년차 테크니컬 라이터입니다.",
+        "skills": ["기술 문서 작성", "Claude 생태계", "가이드 설계"],
+        "tasks": [
+          "Claude Code 기능 가이드 작성",
+          "Claude API 사용법 업데이트",
+          "프롬프트 엔지니어링 가이드 작성",
+          "Confluence 페이지 직접 게시"
+        ]
+      },
+      {
+        "id": "writer-codex",
+        "name": "정민준",
+        "rank": "과장",
+        "role": "테크니컬 라이터 · Codex 담당",
+        "photo": "/employees/jung-minjun.jpg",
+        "employeeId": "SF-2021-012",
+        "joinedAt": "2021-09-01",
+        "colorClass": "green",
+        "model": "claude-sonnet-4-6",
+        "pipelineStep": 3,
+        "pipelineStepLabel": "작성",
+        "description": "Codex 관련 가이드 페이지를 작성 및 업데이트합니다.",
+        "bio": "Codex CLI와 OpenAI 계열 도구 문서를 최신 상태로 유지합니다. 릴리스 노트를 가장 먼저 읽는 사람입니다.",
+        "skills": ["기술 문서 작성", "Codex 생태계", "API 문서화"],
+        "tasks": [
+          "Codex CLI 가이드 작성 및 업데이트",
+          "OpenAI API 사용 가이드 작성",
+          "Codex 관련 Confluence 페이지 게시"
+        ]
+      },
+      {
+        "id": "writer-other",
+        "name": "최예린",
+        "rank": "대리",
+        "role": "테크니컬 라이터 · 신규 도구",
+        "photo": "/employees/choi-yerin.jpg",
+        "employeeId": "SF-2022-021",
+        "joinedAt": "2022-11-14",
+        "colorClass": "indigo",
+        "model": "claude-sonnet-4-6",
+        "pipelineStep": 3,
+        "pipelineStepLabel": "작성",
+        "description": "기타 AI 도구 가이드 페이지를 작성 및 업데이트합니다.",
+        "bio": "Gemini, Cursor, Copilot 등 빠르게 변하는 AI 도구 생태계를 폭넓게 커버합니다. 신규 도구 발굴 담당.",
+        "skills": ["기술 문서 작성", "신규 도구 리서치", "시장 분석"],
+        "tasks": [
+          "Gemini, Cursor 등 기타 AI 도구 가이드 작성",
+          "신규 AI 도구 페이지 생성",
+          "기타 도메인 Confluence 페이지 게시"
+        ]
+      },
+      {
+        "id": "synthesis",
+        "name": "한도윤",
+        "rank": "팀장",
+        "role": "편집장 · 품질 총괄",
+        "photo": "/employees/han-doyun.jpg",
+        "employeeId": "SF-2019-003",
+        "joinedAt": "2019-02-25",
+        "colorClass": "red",
+        "model": "claude-sonnet-4-6",
+        "pipelineStep": 4,
+        "pipelineStepLabel": "취합",
+        "description": "모든 작업 결과를 종합하여 최종 보고서를 작성하고 Index를 업데이트합니다.",
+        "bio": "작성 결과물을 검수·종합해 최종 보고서를 만듭니다. Index 링크 정합성과 전체 품질 보증이 임무인 Wiki 관리팀장입니다.",
+        "skills": ["품질 검증", "편집 총괄", "보고서 작성"],
+        "tasks": [
+          "작성 결과물 취합 및 검토",
+          "Index 페이지 링크 업데이트",
+          "Validation 체크리스트 실행",
+          "주간 실행 보고서 작성 및 커밋"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "trig_018dn6jkaABXrxrkHpKhcriL",
+    "name": "Playbook 분석 및 AI 프롬프트 자동 개선",
+    "cronExpression": "0 10 * * *",
+    "department": "AI 검색 품질팀",
+    "runReportPrefix": "playbook",
+    "expectedDurationMin": 20,
+    "agents": [
+      {
+        "id": "collector",
+        "name": "오세진",
+        "rank": "사원",
+        "role": "데이터 수집 담당",
+        "photo": "/employees/oh-sejin.jpg",
+        "employeeId": "SF-2024-042",
+        "joinedAt": "2024-09-02",
+        "colorClass": "cyan",
+        "model": "claude-sonnet-4-6",
+        "pipelineStep": 1,
+        "pipelineStepLabel": "수집",
+        "description": "Playbook 데이터 및 사용자 쿼리 패턴을 수집합니다.",
+        "bio": "Playbook 데이터와 사용자 검색 패턴을 수집합니다. 검색 품질 개선의 첫 단계인 원시 데이터 확보 담당입니다.",
+        "skills": ["데이터 수집", "쿼리 분석", "패턴 탐지"],
+        "tasks": [
+          "Playbook 데이터 수집",
+          "사용자 쿼리 패턴 추출",
+          "수집 결과 구조화 저장"
+        ]
+      },
+      {
+        "id": "pattern-analyst",
+        "name": "윤가영",
+        "rank": "대리",
+        "role": "검색 품질 분석가",
+        "photo": "/employees/yoon-gayoung.jpg",
+        "employeeId": "SF-2022-018",
+        "joinedAt": "2022-06-20",
+        "colorClass": "teal",
+        "model": "claude-sonnet-4-6",
+        "pipelineStep": 2,
+        "pipelineStepLabel": "분석",
+        "description": "수집된 데이터에서 검색 품질 개선 패턴을 분석합니다.",
+        "bio": "어떤 유형의 검색이 부족한 결과를 내는지 규명합니다. 검색 품질 저하 패턴 분석 전문입니다.",
+        "skills": ["패턴 분석", "통계 처리", "원인 규명"],
+        "tasks": [
+          "수집 데이터 패턴 분석",
+          "검색 품질 저하 원인 유형 분류",
+          "개선 우선순위 도출"
+        ]
+      },
+      {
+        "id": "rule-generator",
+        "name": "임태호",
+        "rank": "과장",
+        "role": "프롬프트 엔지니어",
+        "photo": "/employees/lim-taeho.jpg",
+        "employeeId": "SF-2020-009",
+        "joinedAt": "2020-08-10",
+        "colorClass": "orange",
+        "model": "claude-sonnet-4-6",
+        "pipelineStep": 3,
+        "pipelineStepLabel": "규칙",
+        "description": "분석 결과를 기반으로 AI 프롬프트 개선 규칙을 생성합니다.",
+        "bio": "데이터에서 도출된 인사이트를 실행 가능한 프롬프트 규칙으로 변환합니다. 추상화와 규칙 설계가 전문입니다.",
+        "skills": ["프롬프트 설계", "규칙 생성", "추상화"],
+        "tasks": [
+          "패턴 분석 결과 기반 규칙 도출",
+          "프롬프트 개선 규칙 문서화",
+          "규칙 적용 가이드라인 작성"
+        ]
+      },
+      {
+        "id": "editor",
+        "name": "송하은",
+        "rank": "대리",
+        "role": "프롬프트 에디터",
+        "photo": "/employees/song-haeun.jpg",
+        "employeeId": "SF-2023-027",
+        "joinedAt": "2023-10-04",
+        "colorClass": "pink",
+        "model": "claude-sonnet-4-6",
+        "pipelineStep": 4,
+        "pipelineStepLabel": "편집",
+        "description": "생성된 규칙을 적용하여 AI 프롬프트를 최종 편집합니다.",
+        "bio": "생성된 규칙을 실제 프롬프트에 적용해 최종 편집합니다. 이론을 결과물로 잇는 마지막 단계 담당입니다.",
+        "skills": ["프롬프트 편집", "품질 검증", "최종 검수"],
+        "tasks": [
+          "규칙 기반 프롬프트 수정",
+          "편집 결과 품질 검증",
+          "최종 프롬프트 저장 및 배포"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "trig_01H5zJmHSadkTVEwuk7WRESG",
+    "name": "SFOOD Wiki Auto Search",
+    "cronExpression": "0 0/3 * * *",
+    "department": "자동 검색팀",
+    "runReportPrefix": "auto-search",
+    "expectedDurationMin": 10,
+    "agents": [
+      {
+        "id": "questioner",
+        "name": "강주원",
+        "rank": "사원",
+        "role": "사용자 리서처",
+        "photo": "/employees/kang-juwon.jpg",
+        "employeeId": "SF-2025-002",
+        "joinedAt": "2025-01-06",
+        "colorClass": "amber",
+        "model": "claude-haiku-4-5-20251001",
+        "pipelineStep": 1,
+        "pipelineStepLabel": "출제",
+        "description": "다양한 사용자 페르소나 관점에서 실제로 검색할 법한 질문 5개를 매시간 생성합니다.",
+        "bio": "바이브코딩 학습자가 실제로 마주치는 상황을 페르소나 기반으로 시뮬레이션해 검색 질문을 만듭니다. 매 실행마다 다른 질문으로 위키 커버리지를 넓힙니다.",
+        "skills": ["페르소나 설계", "질문 생성", "주제 다양화"],
+        "tasks": [
+          "페르소나 기반 검색 질문 5개 생성",
+          "과거 불충분 질문 재탐색 버전 작성",
+          "질문 데이터 구조화 저장"
+        ]
+      },
+      {
+        "id": "searcher",
+        "name": "신유나",
+        "rank": "사원",
+        "role": "검색 운영 담당",
+        "photo": "/employees/shin-yuna.jpg",
+        "employeeId": "SF-2024-038",
+        "joinedAt": "2024-08-19",
+        "colorClass": "cyan",
+        "model": "claude-haiku-4-5-20251001",
+        "pipelineStep": 2,
+        "pipelineStepLabel": "검색",
+        "description": "생성된 질문으로 Confluence 위키를 검색하고 결과를 Playbook 페이지에 적재합니다.",
+        "bio": "질문별 위키 검색을 실행하고 충분도를 판정합니다. 검색 결과는 Confluence Playbook 페이지에 자동 누적됩니다.",
+        "skills": ["검색 실행", "충분도 판정", "결과 집계"],
+        "tasks": [
+          "질문 5개 위키 검색 실행",
+          "응답 충분도·추천 문서 수집",
+          "Playbook 페이지 결과 기록",
+          "검색 결과 리포트 저장"
+        ]
+      }
+    ]
+  }
+]

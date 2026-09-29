@@ -1,0 +1,27 @@
+{
+  "_comment": "routine API(claude.ai)에 등록된 실제 스케줄. Claude Code 세션에서 RemoteTrigger list 결과로 갱신한다. fireOffsetMin은 cron 정각 대비 실제 발화 지연(next_run_at 관측값).",
+  "syncedAt": "2026-06-05T07:30:00Z",
+  "routines": {
+    "trig_01H5zJmHSadkTVEwuk7WRESG": {
+      "name": "SFOOD Wiki Auto Search",
+      "cronExpression": "0 0/3 * * *",
+      "fireOffsetMin": 2,
+      "lastFiredAt": "2026-06-05T06:03:26Z",
+      "nextRunAt": "2026-06-05T09:01:40Z"
+    },
+    "trig_018dn6jkaABXrxrkHpKhcriL": {
+      "name": "Playbook 분석 및 Wiki 승격 준비",
+      "cronExpression": "0 10 * * *",
+      "fireOffsetMin": 2,
+      "lastFiredAt": "2026-06-04T17:06:38Z",
+      "nextRunAt": "2026-06-05T10:01:47Z"
+    },
+    "trig_01E5Ktiv4jfrzVDqv4RKM8qp": {
+      "name": "SFOOD Wiki Weekly Maintenance",
+      "cronExpression": "0 11 * * *",
+      "fireOffsetMin": 5,
+      "lastFiredAt": "2026-06-04T11:05:49Z",
+      "nextRunAt": "2026-06-05T11:04:39Z"
+    }
+  }
+}

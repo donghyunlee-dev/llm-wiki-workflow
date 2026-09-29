@@ -1,0 +1,5 @@
+.env.local
+.codex-apikey/
+.claude/
+tmp/
+!tmp/playbook-analysis.json
